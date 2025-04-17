@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>For My Dear Girlfriend ❤️</title>
+  <style>
+    body {
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      background: linear-gradient(135deg, #ffccd5, #ff9ebc);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      color: #333;
+    }
+
+    .container {
+      background: #fff;
+      padding: 30px;
+      border-radius: 25px;
+      box-shadow: 0 8px 20px rgba(255, 105, 180, 0.4);
+      border: 3px solid #ff66b3;
+      text-align: center;
+    }
+
+    input[type="date"] {
+      padding: 10px;
+      font-size: 1rem;
+      border-radius: 10px;
+      border: 2px solid #ff66b3;
+      margin-top: 10px;
+      outline: none;
+    }
+
+    button {
+      background-color: #ff66b3;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 1rem;
+      border-radius: 10px;
+      cursor: pointer;
+      margin-top: 15px;
+    }
+
+    button:hover {
+      background-color: #ff3385;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Dear Solongoo 💖</h1>
+    <p>Please select a special date for us:</p>
+    <input type="date" id="datePicker" />
+    <br />
+    <button onclick="submitDate()">Submit 💝</button>
+  </div>
+
+  <script>
+    function submitDate() {
+      const dateInput = document.getElementById('datePicker').value;
+
+      if(dateInput){
+        const date = new Date(dateInput);
+        document.body.innerHTML = `<div class=\"container\"><h2>You picked <span style=\"color:#ff3385;\">${date.toDateString()}</span>! Can't wait to make beautiful memories together! 😘</h2></div>`;
+      } else {
+        alert("Oops! Please pick a date first! 💕");
+      }
+    }
+  </script>
+</body>
+</html>
